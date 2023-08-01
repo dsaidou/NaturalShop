@@ -1,0 +1,81 @@
+.accordionContainer{
+    height: fit-content;
+    width: 50vmax;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .accordion-visible{
+    border: var(--yellow) solid 1px;
+    border-radius: 2vmin;
+    height: 8vmin;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vmin;
+    background-color: var(--white);
+    transition: all 0.6s linear;
+  }
+  
+  .accordion-visible h2{
+    font-size: 2.2vmin;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .accordion-visible span{
+    font-size: 5vmin;
+    cursor: pointer;
+  }
+  
+  .accordion-toggle{
+    height: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out,
+    height 0.4s 0.3s ease-in-out ;
+    padding: 2.5vmin;
+    border: var(--yellow) solid 1px; 
+    background-color: var(--yellow);
+    border-radius: 0 0 2vmin 2vmin;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    position: relative;
+    top: -2vmin;
+  }
+  
+  .accordion-toggle p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 2vmin;
+  }
+  
+  .animated{
+    height: 18vmin;
+    opacity: 1;
+    transition: 
+    opacity 0.2s 0.2s ease-in-out;
+    animation: down 0.5s ease-in-out;
+  
+  }
+  
+  @keyframes down {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      transform: translateY(0.5vmin);
+    }
+    50%{
+      transform: translateY(0.3vmin);
+    }
+  
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0.1vmin);
+    }
+  }
+  
