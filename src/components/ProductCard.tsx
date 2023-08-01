@@ -1,5 +1,8 @@
 import { useContext, useState } from "react";
 import { appContext } from "../context/Context";
+import strawberryBottle from "../assets/strawberryJuiceBottle.png";
+import orangeBottle from "../assets/orangeJuiceBottle.png";
+import greenJuiceBottle from "../assets/greenJuiceBottle.png";
 
 export interface ProductCard{
     color ?: string,
@@ -23,7 +26,7 @@ export default function ProductCard() {
     const [listItem] = useState<ProductCard[]>([
         {
             color: 'red',
-            image: '/strawberryJuiceBottle.png',
+            image: strawberryBottle,
             name: 'Strawberry juice',
             details: 'fresh strawberry mixed',
             other: 'with passion',
@@ -34,7 +37,7 @@ export default function ProductCard() {
         },
         {
             color: 'orange',
-            image: '/orangeJuiceBottle.png',
+            image: orangeBottle,
             name: 'Orange juice',
             details: 'fresh orange mixed',
             other: 'with carrot',
@@ -45,7 +48,7 @@ export default function ProductCard() {
         },
         {
             color: 'green',
-            image: '/greenJuiceBottle.png',
+            image: greenJuiceBottle,
             name: 'Kiwi juice',
             details: 'fresh kiwi mixed',
             other: 'with lemon',
